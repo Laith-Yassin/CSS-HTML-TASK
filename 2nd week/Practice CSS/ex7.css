@@ -1,0 +1,40 @@
+body{
+    background-color:cornsilk;
+}
+.first{
+    background-color: whitesmoke;
+    border: solid gray;
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.first1{
+    background-color: whitesmoke;
+    border: dotted red;
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: red;
+}
+
+.first2{
+    background-color: whitesmoke;
+    border: solid gray;
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+#orange{
+    background-color: orange;
+}
+
+#yel{
+    background-color: yellow;
+}
+
+.border{
+    border: dotted red;
+}

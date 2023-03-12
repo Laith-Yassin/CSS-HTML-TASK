@@ -1,0 +1,21 @@
+
+body {background-color: bisque;    }
+*{color: green;}
+    .img {
+        float: left;
+    width: 50%;
+    
+    } 
+    .noimg {
+        height: 300px;
+        float: right;
+        width: 50%;
+    }
+    #unblue{
+        color: blue;
+        text-decoration: underline;
+    }
+    #unpur{
+        color: purple;
+        text-decoration: underline;
+    }
