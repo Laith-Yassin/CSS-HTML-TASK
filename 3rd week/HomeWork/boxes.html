@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: auto auto auto;
+            background-color: white;
+            gap: 12px;
+            width: 800px;
+            height: 600px;
+            margin: auto;
+        }
+
+        .item {
+            background-color: #efefef;
+            font-size: 20px;
+        }
+
+        .boxes {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto auto;
+        }
+
+        .gray {
+            background-color: #cfcfcf;
+            margin: 3px;
+        }
+
+        .hr {
+            grid-column: 1 / span 2;
+        }
+
+        .vr {
+            grid-row: 1 / span 2;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Item 1</div>
+
+        <div class="item boxes">
+            <div class="gray">sub 1</div>
+            <div class="gray">sub 2</div>
+            <div class="gray">sub 3</div>
+            <div class="gray">sub 4</div>
+        </div>
+
+        <div class="item boxes">
+            <div class="gray">sub 1</div>
+            <div class="gray">sub 2</div>
+            <div class="gray">sub 3</div>
+            <div class="gray">sub 4</div>
+        </div>
+
+        <div class="item">Item 4</div>
+
+        <div class="item">Item 5</div>
+
+        <div class="item boxes">
+            <div class="gray hr">sub 1</div>
+            <div class="gray hr">sub 2</div>
+        </div>
+
+        <div class="item boxes">
+            <div class="gray vr">sub 1</div>
+            <div class="gray vr">sub 2</div>
+        </div>
+
+        <div class="item">Item 8</div>
+
+        <div class="item boxes">
+            <div class="gray">sub 1</div>
+            <div class="gray">sub 2</div>
+            <div class="gray">sub 3</div>
+            <div class="gray">sub 4</div>
+        </div>
+
+        <div class="item">Item 10</div>
+
+        <div class="item">Item 11</div>
+        
+        <div class="item boxes">
+            <div class="gray">sub 1</div>
+            <div class="gray">sub 2</div>
+            <div class="gray">sub 3</div>
+            <div class="gray">sub 4</div>
+        </div>
+    </div>
+</body>
+</html>
