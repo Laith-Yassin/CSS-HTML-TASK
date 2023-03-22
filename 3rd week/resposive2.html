@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.container {
+            display: grid;
+            grid-template-columns: 1fr 0.25fr;
+            grid-template-rows: 0.1fr 1fr;
+            gap: 10px;
+        }
+        .navbar {
+            display: grid;
+            grid-template-columns: 1fr 60px 60px 60px;
+            grid-template-rows: auto;
+            grid-area: 1/ 1 / 2 /3;
+            background-color: black;
+            color: white;
+            align-content: center;
+            font-size: 20px;
+            padding: 10px;
+        }
+        #title {
+            font-size: 30px;
+            font-style: italic;
+        }
+        .sidebar {
+            grid-area: 2/2/3/3;
+            background-color: black;
+            color: white;
+            margin: 10px;
+            padding: 10px;
+        }
+        .main {
+            display: grid;
+            grid-area: 2/1/3/2;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 0.2fr 0.6fr 1fr 1fr;
+            gap: 20px;
+        }
+        .heading {
+            grid-area: 1/1/2/4;
+            font-size: 30px;
+        }
+        .text {
+            font-size: 16px;
+            grid-area: 2/1/3/4;
+        }
+        .boxes5 {
+            display: grid;
+            grid-area: 3/1/5/4;
+            grid-template-columns: 30fr 30fr 30fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+        }
+        .box1{grid-area: 1/1/2/2;}
+        .box2{grid-area: 1/2/2/3;}
+        .box3{grid-area: 1/3/2/4;}
+        .box4{grid-area: 2/1/3/2;}
+        .box5{grid-area: 2/2/3/3;}
+        .boxesgrid {
+            display: grid;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 0.2fr 1fr;
+            border: 1px black solid;
+        }
+        #header {grid-row: 1; background-color: black; color: white;padding: 10px;}
+        #main {grid-row: 2; padding: 10px;}
+
+        /* for IPad user */
+        @media only screen and (max-width:1024px) {
+            div.container {
+            grid-template-columns: 1fr ;
+            grid-template-rows: 0.1fr 1fr 0.25fr;
+            grid-template-areas: 
+            'nav'
+            'main'
+            'footer';
+        }
+        .navbar{grid-area: nav;}
+        .sidebar{grid-area: footer;}
+        .main {grid-area: main;}
+        .navbar {grid-template-columns: 1fr 0.2fr 0.2fr 0.2fr;}
+
+        }
+
+        /* for phone user */
+        @media only screen and (max-width:730px) {
+            .boxes5 {
+            grid-template-areas: 
+            'box1 box2'
+            'box3 box4'
+            'box5 box6';
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            }
+            .box1 {grid-area: box1;}
+            .box2 {grid-area: box2;}
+            .box3 {grid-area: box3;}
+            .box4 {grid-area: box4;}
+            .box5 {grid-area: box5;}
+        }
+
+        /* smaller phone */
+        @media only screen and (max-width:550px) {
+            .boxes5 {
+            grid-template-areas: 
+            'box1'
+            'box2'
+            'box3'
+            'box4'
+            'box5 ';
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            }            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div id="title">My Website</div>
+            <div>link 1</div>
+            <div>link 2</div>
+            <div>link 3</div>
+        </div>
+
+        <div class="sidebar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, consequuntur totam! Rem praesentium maxime explicabo ullam laudantium eveniet debitis, vel libero, cupiditate sit dolorem similique earum officia autem fugiat quia! lorem*10</div>
+        
+        <div class="main">
+            <div class="heading">This is the main heading</div>
+            <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim laboriosam repellendus eaque, cum pariatur ipsam velit ab cumque nemo quia aliquid architecto non, dolore dolorum vero quod possimus repudiandae?
+            Nulla itaque culpa, reiciendis aliquid, voluptatum recusandae aut cum rerum quam voluptates deleniti eius voluptatibus, incidunt nobis consectetur rem accusantium excepturi laboriosam nesciunt numquam aliquam sapiente! Optio voluptatem aspernatur at.
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius molestiae nisi, atque officia perferendis est hic porro reiciendis similique blanditiis necessitatibus quo autem fuga dolorum maiores velit aperiam at? Nihil?</p></div>
+
+            <div class="boxes5">
+                <div class="box1 boxesgrid">
+                    <div id="header">sdfsd</div>
+                    <div id="main">dsfvsd Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quas veritatis soluta impedit dolorum, eveniet commodi veniam debitis in quibusdam, voluptas, incidunt accusamus. Rerum dicta, hic laudantium nesciunt voluptate consectetur?</div>
+                </div>
+                <div class="box2 boxesgrid">
+                    <div id="header">sdfsd</div>
+                    <div id="main">sdfsd Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor tempore, fugit at quisquam nesciunt aut doloremque reprehenderit sit explicabo sapiente tempora earum commodi inventore voluptate eaque alias eligendi in temporibus.</div>
+                </div>
+                <div class="box3 boxesgrid">
+                    <div id="header">dsfsg</div>
+                    <div id="main">gtghyn Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam ea, quisquam qui possimus earum, quae laudantium repellendus quibusdam asperiores hic dolor sit enim in minus labore, accusantium perferendis voluptatem corrupti?</div>
+                </div>
+                <div class="box4 boxesgrid">
+                    <div id="header">asdsdfsfg</div>
+                    <div id="main">sdvftbyb Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatum asperiores recusandae doloribus, ab velit enim ea veniam eveniet qui quibusdam quod voluptate veritatis repellendus fuga consequatur nesciunt, tempora voluptatem.</div>
+                </div>
+                <div class="box5 boxesgrid">
+                    <div id="header">dfhgsth</div>
+                    <div id="main">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur error facere nemo distinctio nesciunt natus quasi, quibusdam molestiae similique dolorum voluptates ducimus quas labore maxime nobis harum in mollitia odit!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

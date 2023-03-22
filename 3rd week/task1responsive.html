@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task responsive</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 0.5rem;
+            grid-template-areas: 'box3 box2 box1';
+        }
+        .boxes {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            grid-template-rows: 0.2fr 0.5fr 0.3fr;
+            grid-template-areas: 
+            'img title'
+            'img content'
+            'img footer';
+            box-shadow: 1px 1px 5px lavender;
+            border: 1px solid lightblue;
+        }
+        .box1 {grid-area: box1;}
+        .box2 {grid-area: box2;}
+        .box3 {grid-area: box3;}
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit:cover;
+        }
+        .img {grid-area: img;}
+        .title {grid-area: title; padding: 10px;}
+        .content {grid-area: content; padding: 10px;}
+        .footer {grid-area: footer; padding: 10px;}
+
+
+
+        /* for iPad */
+        @media only screen and (max-width:1200px) and (min-width:480px) {
+            .container {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: 
+                'box1 box2'
+                'box3 box';
+            }
+            .boxes{
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 0.2fr 0.6fr 0.3fr;
+                grid-template-areas: 
+                'img'
+                'title'
+                'content'
+                'footer';
+            }
+
+                
+        }
+
+                /* for phone */
+
+                @media only screen and (max-width:480px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-areas: 
+                'box1'
+                'box2'
+                'box3';
+            }
+            .boxes{
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 0.2fr 0.6fr 0.3fr;
+                grid-template-areas: 
+                'img'
+                'title'
+                'content'
+                'footer';
+            }
+        }
+            
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1 boxes">
+            <div class="img"><img src="img/Capture1.JPG" alt=""></div>
+            <div class="title">TITLE</div>
+            <div class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident, iste mollitia voluptate ducimus eius minima! Ad aspernatur facilis laborum. Ipsa magnam laborum nemo dignissimos nostrum molestiae culpa, aliquid saepe corporis.</div>
+            <div class="footer">FOOTER</div>
+        </div>
+        
+        <div class="box2 boxes">
+            <div class="img"><img src="img/Capture5.JPG" alt=""></div>
+            <div class="title">TITLE</div>
+            <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt laudantium explicabo dolores reiciendis aperiam architecto natus. Non, ipsum nesciunt? Obcaecati necessitatibus ut recusandae nulla, enim fuga sunt quos facilis amet.</div>
+            <div class="footer">FOOTER</div>
+        </div>  
+
+        <div class="box3 boxes">
+            <div class="img"><img src="img/Capture7.JPG" alt=""></div>
+            <div class="title">TITLE</div>
+            <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum possimus dolorem, mollitia officia velit minus tenetur omnis! Possimus a eius tenetur, omnis aspernatur, vero nostrum, laboriosam quam necessitatibus exercitationem magnam.</div>
+            <div class="footer">FOOTER</div>
+        </div>        
+
+        
+
+    </div>
+</body>
+</html>

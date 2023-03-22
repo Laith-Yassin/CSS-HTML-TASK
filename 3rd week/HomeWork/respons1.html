@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {margin: 0;}
+ .nav {box-shadow: 2px 2px 8px;}
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+ul.topnav li {float: right;}
+
+ul.topnav li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {color: #eec303c5;}
+
+ul.topnav li.left {float: left;}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    background-color: #e4ecee;
+    margin: 15px;
+    flex-wrap: wrap;
+
+}
+.header div {background-color: white;}
+.item {margin: 10px;padding: 10px;}
+.item4 {margin: 10px;padding: 10px;background-image: linear-gradient(yellow,orange);color: white;}
+
+    .container {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin: 15px;
+    }
+    .review {grid-column: 2;}
+    .overall {
+        grid-column: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    .box1 {
+        grid-area: 1/1/2/2;
+        background-color: #e4ecee;
+        justify-content: center;
+        text-align: center;
+    }
+    .box2 {
+        display: grid;
+        grid-area: 1/2/2/3;
+        align-content: space-around;
+    }
+    .rev1 {
+        grid-area: 2/1/3/3;
+        display: grid;
+        grid-template-areas: 'img nam clear' 'text text text';
+        grid-template-columns: 1fr 2fr 3fr;
+        grid-template-rows: auto auto;
+    }
+    .img {grid-area: img;object-fit: cover;border-radius: 100%;}
+    .rev1 img , .rev2 img , .rev3 img {object-fit: cover;}
+    .text {grid-area:text;}
+    .title {grid-area: nam;}
+    .rev2 {
+        grid-area: 3/1/4/3;
+        display: grid;
+        grid-template-areas: 'img nam clear' 'text text text';
+        grid-template-columns: 1fr 2fr 3fr;
+        grid-template-rows: auto auto;
+    }
+    .rev3 {
+        grid-area: 4/1/5/3;
+        display: grid;
+        grid-template-areas: 'img nam clear' 'text text text';
+        grid-template-columns: 1fr 2fr 3fr;
+        grid-template-rows: auto auto;
+    }
+    p {
+        color: orange;
+        font-size: 50px;
+        margin: 0;    
+    }
+
+
+@media screen and (max-width: 600px) {
+    ul.topnav li.left, ul.topnav li {float: none;}
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .overall {
+        grid-area: 1/1/2/2;
+    }
+    .review {grid-area: 2/1/3/2;}
+}
+
+@media only screen and (max-width:400px) {
+    
+    .overall {
+        grid-template-areas: 'box1 box1' 'box2 box2' 'rev1 rev1' 'rev2 rev2' 'rev3 rev3';
+    }
+    .review {grid-area: 2/1/3/2;}
+    .box1 {grid-area: box1;}
+    .box2 {grid-area: box2;}
+    .rev1 {grid-area: rev1;}
+    .rev2 {grid-area: rev2;}
+    .rev3 {grid-area: rev3;}
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul class="topnav">
+            <li><img src="search.JPG" alt=""></li>
+            <li><img src="Capture.JPG" alt=""></li>
+            <li><a href="#home">CONTACT</a></li>
+            <li><a href="#home">PAGES</a></li>
+            <li><a href="#news">BLOG</a></li>
+            <li><a class="active" href="#contact">SHOP</a></li>
+            <li><a href="#about">HOME</a></li>
+            <li class="left"><img src="Capture1.JPG" alt=""></li>
+        </ul>
+    </div>
+    <div>
+        <div class="header">
+            <div class="item">Description</div>
+            <div class="item">Specification</div>
+            <div class="item">Comments</div>
+            <div class="item4">Review</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="overall">
+            <div class="box1">
+                <h2>Overall</h2>
+                <p>4.0</p>
+                <h5>(03 Reviews)</h5>
+            </div>
+            <div class="box2">
+                <h3>Based on 3 Reviews</h3>
+                <div>5 star ***** 01</div>
+                <div>4 star ***** 01</div>
+                <div>3 star ***** 01</div>
+                <div>2 star ***** 01</div>
+                <div>1 star ***** 01</div>
+            </div>
+            <div class="rev1">
+                <div class="title">BLAKE RUIZ</div>
+                <img src="grid-img2.png" alt="" class="img" width="100%" height="100%">
+                <div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis beatae sequi repellat. Quam soluta consequuntur sint est fugit dicta, qui obcaecati rerum architecto sapiente illo optio veritatis impedit deserunt tempore?
+                Blanditiis, doloremque? Expedita obcaecati officiis hic blanditiis laborum adipisci eum odit error! Ipsam eum laboriosam sapiente vero soluta sint quasi totam reprehenderit veniam molestias, quidem tempora modi animi velit. Laboriosam.</div>
+            </div>
+            <div class="rev2">
+                <div class="title">BLAKE RUIZ</div>
+                <img src="grid-img5.png" alt="" class="img" width="100%" height="100%">
+                <div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis beatae sequi repellat. Quam soluta consequuntur sint est fugit dicta, qui obcaecati rerum architecto sapiente illo optio veritatis impedit deserunt tempore?
+                Blanditiis, doloremque? Expedita obcaecati officiis hic blanditiis laborum adipisci eum odit error! Ipsam eum laboriosam sapiente vero soluta sint quasi totam reprehenderit veniam molestias, quidem tempora modi animi velit. Laboriosam.</div>
+            </div>
+            <div class="rev3">
+                <div class="title">BLAKE RUIZ</div>
+                <img src="Capture1.JPG" alt="" class="img" width="100%" height="100%">
+                <div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis beatae sequi repellat. Quam soluta consequuntur sint est fugit dicta, qui obcaecati rerum architecto sapiente illo optio veritatis impedit deserunt tempore?
+                Blanditiis, doloremque? Expedita obcaecati officiis hic blanditiis laborum adipisci eum odit error! Ipsam eum laboriosam sapiente vero soluta sint quasi totam reprehenderit veniam molestias, quidem tempora modi animi velit. Laboriosam.</div>
+            </div>
+        </div>
+        <div class="review">
+            <img src="2.JPG" alt="" width="100%" height="100%">
+        </div>
+    </div>
+</body>
+</html>

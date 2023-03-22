@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+            .nav{
+        display: flex;
+        width: 100%;
+        background-color: rgb(0,173,188);
+        color: white;
+        }
+        .nav1{
+            width: 70%;
+        }
+        .nav2{
+            width: 30%;
+        }
+        .nav2 p{
+        border: 1px solid white;
+        font-size: 15px;
+        padding: 10px;
+        margin: auto;
+        }
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        }
+
+        li {
+        display: inline-block;
+        }
+
+        li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        
+        }
+
+        li a:hover {
+        text-decoration: underline orange;
+        }
+        .div-part2{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        .paragraph{
+            width: 40%;
+            background-color: rgb(255,223,161);
+            text-align: center;
+            line-height: 20pt;
+        }
+        .img{
+            width: 60%;
+            background-color: rgb(255,223,161);
+        }
+        .div-part2 img{
+            width: 100%;
+        }
+        .div-part3{
+            width: 100%; 
+            margin: auto;
+            text-align: center;
+        }
+        .group{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas: 'n1 n2 n3 n4 n5';
+            justify-content: center;
+            gap: 25px;
+
+        }
+        /* n1 */
+        .num1{
+            grid-area: n1;
+        border: 1px solid beige;
+        height: 150px;
+        text-align: center;
+        line-height: 10pt;
+        }
+        .num1 h3{
+            font-size: 40pt;
+            color: rgb(77,87,95);
+
+        }
+        .num1 h3 a{
+            display: block;
+            color: rgb(77,87,95);
+        text-align: center;
+        text-decoration: none;
+
+        }
+        .num1 h3 a :hover{
+            color: rgb(0,173,188);
+        }
+        /* n2 */
+        .num2 {
+            grid-area: n2;
+            border: 1px solid beige;
+            height: 150px;
+            text-align: center;
+            line-height: 10pt;
+        }
+        .num2 h3{
+            font-size: 40pt;
+            color: rgb(77,87,95);
+
+        }
+        .num2 h3 a{
+            display: block;
+            color: rgb(77,87,95);
+        text-align: center;
+        text-decoration: none;
+
+        }
+        .num2 h3 a :hover{
+            color: rgb(0,173,188);
+        }
+        /* n3 */
+        .num3 {
+            grid-area: n3;
+            border: 1px solid beige;
+            height: 150px;
+            text-align: center;
+            line-height: 10pt;
+        }
+        .num3 h3{
+            font-size: 40pt;
+            color: rgb(77,87,95);
+
+        }
+        .num3 h3 a{
+            display: block;
+            color: rgb(77,87,95);
+        text-align: center;
+        text-decoration: none;
+
+        }
+        .num3 h3 a :hover{
+            color: rgb(0,173,188);
+        }
+             /* n4 */
+        .num4 {
+            grid-area: n4;
+            border: 1px solid beige;
+            height: 150px;
+            text-align: center;
+            line-height: 10pt;
+        }
+        .num4 h3{
+            font-size: 40pt;
+            color: rgb(77,87,95);
+
+        }
+        .num4 h3 a{
+            display: block;
+            color: rgb(77,87,95);
+        text-align: center;
+        text-decoration: none;
+
+        }
+        .num4 h3 a :hover{
+            color: rgb(0,173,188);
+        }
+         /* n5 */
+        .num5 {
+            grid-area: n5;
+            border: 1px solid beige;
+            height: 150px;
+            text-align: center;
+            line-height: 10pt;
+        }
+        .num5 h3{
+            font-size: 40pt;
+            color: rgb(77,87,95);
+
+        }
+        .num5 h3 a{
+            display: block;
+            color: rgb(77,87,95);
+        text-align: center;
+        text-decoration: none;
+
+        }
+        .num5 h3 a :hover{
+            color: rgb(0,173,188);
+        }
+        /* cards start */
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            height: 30vh;
+            margin: 1px;
+        }
+
+        /* card 1 */
+        .cards div.card1 {
+            border-radius: 5%;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin: 15px;
+            color: whitesmoke;
+        }
+
+        .card1 {
+            background-image: url(hour.JPG);
+            background-repeat: no-repeat;
+            background-size: 100% 60%;
+        }
+
+        .card1 div {
+            background-color: rgb(89, 202, 211, 0.9);
+            padding: 4px;
+            height: 10%;
+        }
+
+        /* card 2 */
+        .cards div.card2 {
+            border-radius: 5%;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-content: flex-end;
+            justify-content: flex-end;
+            margin: 10px;
+            color: whitesmoke;
+        }
+
+        .card2 {
+            background-image: url(student.JPG);
+            background-repeat: no-repeat;
+            background-size: 100% 60%;
+        }
+
+        .card2 div {
+            background-color: rgb(166, 155, 193, 0.9);
+            height: 10%;
+            padding: 4px;
+        }
+
+        /* card 3 */
+        .cards div.card3 {
+            border-radius: 5%;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-content: flex-end;
+            justify-content: flex-end;
+            margin: 10px;
+            color: whitesmoke;
+        }
+
+        .card3 {
+            background-image: url(educator.JPG);
+            background-repeat: no-repeat;
+            background-size: 100% 60%;
+        }
+
+        .card3 div {
+            background-color: rgb(89, 185, 220, 0.9);
+            height: 10%;
+            padding: 4px;
+        }
+
+        /* card 4 */
+        .cards div.card4 {
+            border-radius: 5%;
+            display: flex;
+            text-align: center;
+            flex-direction: column;
+            align-content: flex-end;
+            justify-content: flex-end;
+            margin: 10px;
+            color: whitesmoke;
+        }
+
+        .card4 {
+            background-image: url(involved.JPG);
+            background-repeat: no-repeat;
+            background-size: 100% 60%;
+        }
+
+        .card4 div {
+            background-color: rgb(209, 213, 103, 0.9);
+            height: 10%;
+            padding: 4px;
+        }
+
+        /* cards end */
+        .orangebar {
+            background-color: #ffa400;
+            color: white;
+            text-align: center;
+            font-size: 40px;
+            font-weight: bolder;
+            padding: 10px;
+        }
+
+        /* images start */
+        .imges {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-areas: "i1 i2 i3 i4 i5 i6 i7 i8 i9 i10 i11 i12";
+        }
+        .img1 {
+            grid-area: i1;
+        }
+        .img2 {
+            grid-area: i2;
+        }
+        .img3 {
+            grid-area: i3;
+        }
+        .img4 {
+            grid-area: i4;
+        }
+        .img5 {
+            grid-area: i5;
+        }
+        .img6 {
+            grid-area: i6;
+        }
+        .img7 {
+            grid-area: i7;
+        }
+        .img8 {
+            grid-area: i8;
+        }
+        .img9 {
+            grid-area: i9;
+        }
+        .img10 {
+            grid-area: i10;
+        }
+        .img11 {
+            grid-area: i11;
+        }
+        .img12 {
+            grid-area: i12;
+        }
+
+        /* images end */
+        .thanks {
+            margin-top: 50px;
+            text-align: center;
+            width: 100%;
+            font-size: 50px;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+            color: #6181ab;
+        }
+
+        /* list */
+        .list {
+            margin: 15px;
+            text-align: center;
+        }
+
+        .ul1 {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            list-style: none;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        /* list end */
+        button {
+            background-color: #ffa400;
+            color: whitesmoke;
+            text-align: center;
+            justify-content: center;
+            border-radius: 10%;
+            font-size: 30px;
+            padding: 10px;
+            width: 160px;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .see {
+            color: #6181ab;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        /* footer start */
+        .footer {
+            display: grid;
+            background-color: #292f36;
+            margin-top: 20px;
+            grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 0.5fr 0.5fr;
+            grid-template-areas:
+                "clear6 flex flex lang clear4"
+                "clear2 text gg icon clear"
+                "clear1 logo gg clear3 clear5";
+            bottom: 0;
+            position: relative;
+        }
+
+        .flex {
+            grid-area: flex;
+        }
+
+        .logo {
+            grid-area: logo;
+        }
+
+        .text {
+            grid-area: text;
+            font-size: smaller;
+            color: aliceblue;
+        }
+
+        .icons {
+            grid-area: icon;
+        }
+
+        .lang {
+            grid-area: lang;
+        }
+
+        .ul2 {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            list-style: none;
+            font-size: 20px;
+            padding: 0;
+        }
+
+        li {
+            text-align: center;
+        }
+
+        .ul2 li {
+            border-right: #6181ab solid 2px;
+            border-right-width: 1px;
+            padding: 10px;
+            color: whitesmoke;
+        }
+        /* footer end */
+        /* @media */
+        @media screen and (max-width:1000px) {
+            .cards {
+                grid-template-columns: 1fr 1fr ;
+                grid-template-rows: 1fr 1fr ;
+                height: 50vh;
+            }
+            .imges {
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas: "i1 i2 i3 i4 i5 i6 " " i7 i8 i9 i10 i11 i12";
+            }
+            .group{
+                grid-template-columns: 1fr 1fr ;
+                grid-template-rows: 1fr 1fr 1fr;
+                grid-template-areas: 
+                'n1 n1' 
+                'n2 n3 ' 
+                'n4 n5';
+            }
+        }
+        @media screen and (max-width:500px) {
+            .cards {
+                grid-template-columns: 1fr  ;
+                grid-template-rows: 1fr 1fr 1fr 1fr ;
+                height: 90vh;
+            }
+            .imges {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                grid-template-areas: 
+                "i1 i2 i3" 
+                " i4 i5 i6 " 
+                " i7 i8 i9 "
+                " i10 i11 i12";
+            }
+            .group{
+                grid-template-columns: 1fr  ;
+                grid-template-rows: repeat(6, 1fr);
+                grid-template-areas: 
+                'n1 ' 
+                'n2 ' ' n3' 
+                'n4 ' ' n5';
+            }
+            .div-part2{
+                flex-direction: column;
+            }
+            .div-part2 div {width: 100%;}
+
+        }
+    </style>
+</head>
+
+<body>
+    
+        <div class="nav">
+            <div class="nav1">
+                <ul>
+                    <li><a href="#home">image</a></li>
+                    <li><a href="#news">Learn</a></li>
+                    <li><a href="#contact">Projects</a></li>
+                    <li><a href="#contact">Stats</a></li>
+                    <li><a href="#contact">Help Us</a></li>
+                    <li><a href="#contact">Incubator</a></li>
+                    <li><a href="#contact">About</a></li>
+                </ul>
+            </div>
+            <div class="nav2">
+                <li><a href="#home"><p>Create</p></a></li>
+                <li><a href="#news"><p>Sign in</p></a></li>
+                <li><a href="#contact">Image</a></li>
+            </div>
+        </div>
+    
+    <div class="div-part2">
+        <div class="paragraph">
+            <div class="word">
+                <h2>Help students become superheroes!</h2>
+                <p>Join our highly supportive Professional Learning Program for middle and high school educators.</p>
+                <button style="background-color: rgb(68,118,159); margin: auto; width: 150px; height: 50px; color: white; font-weight: bold;font-size: 15pt;" >Learn more</button></P>
+            </div>
+        </div>
+        <div class="img">
+                <img src="girl.png" alt="" height="100%">    
+        </div>
+    </div>
+    <div class="div-part3">
+        <h4>Every student in every school should have the opportunity to learn computer science</h4>
+        <div class="group">
+            <div class="num1">
+                <h3><a href="#">80M</a></h3>
+                <h6>students on Code.org</h6>
+            </div>
+            <div class="num2">
+                <h3><a href="#">30M</a></h3>
+                <h6>students on Code.org</h6>
+            </div>
+            <div class="num3">
+                <h3><a href="#">242M</a></h3>
+                <h6>students on Code.org</h6>
+            </div>
+            <div class="num4">
+                <h3><a href="#">2M</a></h3>
+                <h6>students on Code.org</h6>
+            </div>
+            <div class="num5">
+                <h3><a href="#">50M</a></h3>
+                <h6>students on Code.org</h6>
+            </div>
+        </div>
+    </div>
+    <!-- cards start -->
+    <div class="cards">
+        <div class="card1">
+            <div>Hour of Code</div>
+            <div>Try the Hour Code</div>
+            <div>About the Hour of Code</div>
+            <div>Host an Hour of Code</div>
+        </div>
+        <div class="card2">
+            <div>Students</div>
+            <div>Try Code Studio</div>
+            <div>Code with The Bad Guys</div>
+            <div>Other online courses</div>
+        </div>
+        <div class="card3">
+            <div>Educators</div>
+            <div>Elementary school</div>
+            <div>Middle school</div>
+            <div>High school</div>
+        </div>
+        <div class="card4">
+            <div>Get involved</div>
+            <div>See the state</div>
+            <div>Bring CS to your school</div>
+            <div>Host an Hour of Code</div>
+        </div>
+    </div>
+    <!-- cards end -->
+    <div class="orangebar">Over 242 million Code.org projects created</div>
+    <!-- images start -->
+    <div class="imges">
+        <div class="img1">
+            <img src="gallery_thumbnails_2019a1.jpg" alt="" width="100%" height="100%" />
+        </div>
+        <div class="img2">
+            <img src="gallery_thumbnails_2019a2.jpg" alt="" width="100%" height="100%" />
+        </div>
+        <div class="img3">
+            <img src="gallery_thumbnails_2019a3.jpg" alt="" width="100%" height="100%" />
+        </div>
+        <div class="img4">
+            <img src="gallery_thumbnails_2019a4.jpg" alt="" width="100%" height="100%" />
+        </div>
+        <div class="img5">
+            <img src="gallery_thumbnails_2019a5.jpg" alt="" width="100%" height="100%" />
+        </div>
+        <div class="img6">
+            <img src="gallery_thumbnails_2019a6.jpg" alt="" width="100%" height="100%" />
+        </div>
+        <div class="img7">
+            <img src="gallery_thumbnails_2019b7.jpg" alt="" width="100%" height="100%" />
+        </div>
+        <div class="img8">
+            <img src="gallery_thumbnails_2019b8.jpg" alt="" width="100%" height="100%" />
+        </div>
+        <div class="img9">
+            <img src="gallery_thumbnails_2019b9.jpg" alt="" width="100%" height="100%" />
+        </div>
+        <div class="img10">
+            <img src="gallery_thumbnails_2019b10.jpg" alt="" width="100%" height="100%" />
+        </div>
+        <div class="img11">
+            <img src="gallery_thumbnails_2019b11.jpg" alt="" width="100%" height="100%" />
+        </div>
+        <div class="img12">
+            <img src="gallery_thumbnails_2019b.jpg" alt="" width="100%" height="100%" />
+        </div>
+    </div>
+    <!-- images end -->
+    <div class="thanks">Code.org thanks</div>
+    <!-- Amazon • The Ballmer Group • Coinbase • Google.org • Charlie Lee • Microsoft • Spiegel Family Fund • Vista Equity Partners-->
+    <div class="list">
+        <ul class="ul1">
+            <li>Amazon •</li>
+            <li>The Ballmer Group •</li>
+            <li>Coinbase •</li>
+            <li>Google.org •</li>
+            <li>Charlie Lee •</li>
+            <li>Microsoft •</li>
+            <li>Spiegel Family Fund •</li>
+            <li>Vista Equity Partners</li>
+        </ul>
+    </div>
+    <!-- list end -->
+    <div class="button">
+        <button>Donate</button>
+        <div class="see">See more supporters</div>
+    </div>
+    <!-- footer start -->
+    <div class="footer">
+        <div class="flex">
+            <ul class="ul2">
+                <!--  Cookie Notice  About  Partners  Blog  Donate  Store  Support  Terms-->
+                <li>Privacy Policy</li>
+                <li>Cookie Notice</li>
+                <li>About</li>
+                <li>Partners</li>
+                <li>Blog</li>
+                <li>Donate</li>
+                <li>Store</li>
+                <li>Support</li>
+                <li>Terms</li>
+            </ul>
+        </div>
+        <div class="text">
+            © Code.org, 2023. Code.org®, the CODE logo and Hour of Code® are
+            trademarks of Code.org. Built on GitHub from Microsoft
+        </div>
+        <div class="logo">
+            <img src="powers.JPG" alt="" width="100%" height="50%" />
+        </div>
+        <div class="icons">
+            <img src="icons.JPG" alt="" width="100%" height="50%" />
+        </div>
+        <div class="lang">
+            <img src="lang.JPG" alt="" width="100%" height="50%" />
+        </div>
+    </div>
+    <!-- footer end -->
+</body>
+
+</html>

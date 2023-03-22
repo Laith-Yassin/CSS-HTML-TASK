@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 0.2fr 1fr 1fr 1fr 1fr 0.2fr;
+            grid-template-rows: 0.1fr 0.1fr 5fr 1.5fr;
+            height: 1200px;
+            gap: 20px;
+        }
+        /* grid-template-areas:
+
+            "clear clear menu1 menu1 menu1 clear"
+            "clear side search search search clear"
+            "clear side mainbox mainbox mainbox clear"
+            "clear box1 box2 box3 box4 clear"; */
+
+        .menu {
+            display:grid;
+            grid-template-columns:  0.2fr 0.2fr 0.2fr 0.2fr 0.2fr 0.4fr 0.3fr 0.2fr;
+            grid-area: 1/3/2/6;
+            font-size: 1fr;
+            font-weight: bolder;
+            align-items: center;
+        }
+        #home {color: rgb(1, 179, 1);}
+        #item {grid-column: 7;}
+        .search {
+            grid-area: 2/3/3/6;
+            display: grid;
+            grid-template-columns: 0.2fr 0.2fr 0.2fr 3fr 1fr;
+            align-items: center;
+        }
+
+        img {object-fit: cover;}
+        .sidebar {
+            grid-area: 2/2/4/3;
+            border: lightgrey 2px solid;
+            font-size: 1fr;
+            display: grid;
+            grid-template-areas: 
+            'all'
+            'op1'
+            'op2'
+            'op3'
+            'op4'
+            'op5'
+            'op6'
+            'op7'
+            'op8'
+            'op9'
+            'op10'
+            'op11';
+
+            padding: 15px;
+            padding-left: 25px;
+        }
+        .op1 {grid-area: op1;}
+        .op2 {grid-area: op2;}
+        .op3 {grid-area: op3;}
+        .op4 {grid-area: op4;}
+        .op5 {grid-area: op5;}
+        .op6 {grid-area: op6;}
+        .op7 {grid-area: op7;}
+        .op8 {grid-area: op8;}
+        .op9 {grid-area: op9;}
+        .op10 {grid-area: op10;}
+        .op11 {grid-area: op11;}
+
+        .all {
+            grid-area: all;
+            background-color: rgb(1, 179, 1);
+            color: white;
+            padding: 10px;
+        }
+        .all1 {padding: 10px;}
+
+        .mainbox {
+            grid-area: 3/3/4/6;
+            background-image: url(img/banner.jpg);
+            background-repeat:space;
+            background-size: cover;
+        }
+        .box1 {grid-area: 4/2/5/3; }
+        .box2 {grid-area: 4/3/5/4; }
+        .box3 {grid-area: 4/4/5/5; }
+        .box4 {grid-area: 4/5/5/6; }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        @media only screen and (max-width:1200px) {
+            .container {
+                grid-template-rows: 0.2fr 0.2fr 0.4fr 2fr 1fr;
+            }
+            .sidebar {
+                grid-area: 3/2/4/6;
+                display: grid;
+
+                font-size: 0.75rem;
+                grid-template-areas: 
+                'all op1 op2 op3 op4 op5'
+                'op6 op7 op8 op9 op10 op11';
+            }
+            .mainbox {
+            grid-area: 4/2/5/6;
+            }
+            .search {
+            grid-area: 2/2/3/6;
+            display: grid;
+            align-items: center;
+        }
+            .box1 {grid-area: 5/2/6/3; }
+            .box2 {grid-area: 5/3/6/4; }
+            .box3 {grid-area: 5/4/6/5; }
+            .box4 {grid-area: 5/5/6/6; }
+        }
+        @media only screen and (max-width: 700px) {
+            .box1 {grid-area: 5/2/6/4; }
+            .box2 {grid-area: 5/4/6/6; }
+            .box3 {grid-area: 6/2/7/4; }
+            .box4 {grid-area: 6/4/7/6; }
+            .container {
+                grid-template-rows: 0.1fr 0.1fr 1fr 5fr 1.5fr 1.5fr;
+            }
+            .sidebar {
+
+                grid-template-areas: 
+                'all op1 op2'
+                'op3 op4 op5'
+                'op6 op7 op8 '
+                'op9 op10 op11';
+            }
+            .search {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 0.2fr 0.2fr;
+        }   
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="menu">
+            <div id="home">HOME</div>
+            <div id="shop">SHOP</div>
+            <div id="pages">PAGES</div>
+            <div id="blog">BLOG</div>
+            <div id="contant">CONTANT</div>
+            <div id="item"><img src="img/ITEM.JPG" alt="" width="100%" height="100%"></div>
+        </div>
+        <div class="search">
+            <div class="select">
+                <select id="all Categories" name="all Categories">
+                    <option value="1">all Categories</option>
+                    <option value="2">all Categories</option>
+                    <option value="3">all Categories</option>
+                </select>
+            </div>
+            <div class="search1">
+                <input type="text" placeholder="what do you need" >
+            </div>
+            <div>
+                <input type="submit" value="Search">
+            </div>
+            <div class="part4" style="grid-column: 5;">
+                <div class="divv">
+
+                    <div class="div12">
+                        <h5>Call to ask any question</h5>
+                        <h5 style="color: aqua;">+962779697216.</h5>
+                    </div>
+                </div>
+            </div>
+                    
+
+            
+        </div>
+        <div class="sidebar">
+            <div class="all">All departments</div>
+            <div class="all1 op1">Fresh Meat</div>
+            <div class="all1 op2">Vegetables</div>
+            <div class="all1 op3">Fruit & Nut Gifts</div>
+            <div class="all1 op4">Fresh Berries</div>
+            <div class="all1 op5">Ocean Foods</div>
+            <div class="all1 op6">Butter & Eggs</div>
+            <div class="all1 op7">Fast Food</div>
+            <div class="all1 op8">Fresh Onion</div>
+            <div class="all1 op9">Papayaya & Crisps</div>
+            <div class="all1 op10">Oatmeal</div>
+            <div class="all1 op11">Fresh Bananas</div>
+        </div>
+        <div class="mainbox"></div>
+        <div class="box1"><img src="img/cat-2.jpg" alt="" width="100%" height="100%"></div>
+        <div class="box2"><img src="img/cat-3.jpg" alt="" width="100%" height="100%"></div>
+        <div class="box3"><img src="img/cat-4.jpg" alt="" width="100%" height="100%"></div>
+        <div class="box4"><img src="img/orange.jpg" alt="" width="100%" height="100%"></div>
+    </div>
+
+
+</html>

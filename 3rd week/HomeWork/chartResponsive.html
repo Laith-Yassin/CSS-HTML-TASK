@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chart</title>
+    <style>
+        body {margin: 15px;}
+        .container {
+            display: grid;
+            grid-template-areas: 'dash chart chart wid table full' 'form form butt ele calen error';
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+            grid-template-rows:  3fr 3fr;
+            gap: 15px;
+            background-color: #eeeeee;
+            text-align: center;
+            color: white;
+            height: 15vh;
+        }
+        .container div {font-size: 20px}
+        .item {
+            background-color: skyblue;
+            grid-area: dash;
+        }
+        .item1 {
+            background-color: rgb(2, 142, 2);
+            grid-area: chart;
+        }
+        .item2 {
+            background-color: orange;
+            grid-area: wid;
+        }
+        .item3 {
+            background-color: tomato;
+            grid-area: table;
+        }
+        .item4 {
+            background-color: blue;
+            grid-area: full;
+        }
+        .item5 {
+            background-color: tomato;
+            grid-area: form;
+        }
+        .item6 {
+            background-color: blue;
+            grid-area: butt;
+        }
+        .item7 {
+            background-color: skyblue;
+            grid-area: ele;
+        }
+        .item8 {
+            background-color: rgb(2, 142, 2);
+            grid-area: calen;
+        }
+        .item9 {
+            background-color: orange;
+            grid-area: error;
+        }
+
+        .part2 {
+            display: grid;
+            grid-template-columns: 75% 25%;
+            grid-template-rows: 3fr;
+            margin-top: 20px;
+        }
+        .img {grid-column: 1;}
+        .boxes {
+            grid-column: 2;
+            display: grid;
+            grid-template-areas: 'box1 box2' 'box3 box4' 'box5 box6';
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        .box1 {
+            grid-area: box1;
+            background-color: black;
+            color: #eeeeee;
+        }
+        .box2 {
+            grid-area: box2;
+            background-color: black;
+            color: #eeeeee;
+        }
+        .box3 {
+            grid-area: box3;
+            background-color: black;
+            color: #eeeeee;
+        }
+        .box4 {
+            grid-area: box4;
+            background-color: black;
+            color: #eeeeee;
+        }
+        .box5 {
+            grid-area: box5;
+            background-color: black;
+            color: #eeeeee;
+        }
+        .box6 {
+            grid-area: box6;
+            background-color: black;
+            color: #eeeeee;
+        }
+        @media only screen and (max-width:900px) {
+            .container {
+                grid-template-areas: 'dash chart chart ' ' wid table full' 'form form butt ' ' ele calen error';
+                grid-template-columns: 1fr 1fr 1fr  ;
+                grid-template-rows:  2fr 2fr 2fr 2fr;
+
+            }
+            .part2 {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+            }
+            .boxes {grid-row: 2; grid-column: 1;}
+        }
+        @media screen and (max-width:550px) {
+            .container {
+                grid-template-areas: 'dash ' ' chart '  ' wid ' ' table ' ' full' 'form ' ' butt ' ' ele ' ' calen ' ' error';
+                grid-template-columns: 1fr   ;
+                grid-template-rows:  1fr 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr 1fr;
+                gap: 0;
+                margin-bottom: 50px;
+            }
+            .boxes {
+                grid-template-areas: 'box1 ' ' box2' 'box3 ' ' box4' 'box5 ' ' box6';
+                grid-template-columns: 1fr ;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                gap: 2px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Dashboard</div>
+        <div class="item1">Chart</div>
+        <div class="item2">Widgets</div>
+        <div class="item3">Table</div>
+        <div class="item4">Full Width</div>
+        <div class="item5">Forms</div>
+        <div class="item6">Buttons</div>
+        <div class="item7">Elements</div>
+        <div class="item8">Calender</div>
+        <div class="item9">Errors</div>
+    </div>
+    <div style="margin-left: 30px; width: 160px;">
+        <h2>Site Analysis</h2>
+        <h4>Overview of Latest Month</h4>
+    </div>
+    <div class="part2">
+        <div class="img"><img src="chart.JPG" alt="" width="100%" height="100%"></div>
+        <div class="boxes">
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+            <div class="box4"></div>
+            <div class="box5"></div>
+            <div class="box6"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
